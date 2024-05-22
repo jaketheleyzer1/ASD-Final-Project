@@ -1,15 +1,11 @@
-[gd_scene load_steps=3 format=3 uid="uid://d2447vg7p0omn"]
+[gd_scene load_steps=2 format=3 uid="uid://d2447vg7p0omn"]
 
-[ext_resource type="PackedScene" uid="uid://meagb2dinhur" path="res://player.tscn" id="1_q5tks"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m06ld"]
+[ext_resource type="PackedScene" uid="uid://dbks0twyb0nrq" path="res://player.tscn" id="1_q5tks"]
 
 [node name="Node2D" type="Node2D"]
+scale = Vector2(-0.612821, 0.327712)
 
-[node name="Player" parent="." instance=ExtResource("1_q5tks")]
+[node name="TileMap" type="TileMap" parent="."]
+format = 2
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
-position = Vector2(-723, -2)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
-shape = SubResource("RectangleShape2D_m06ld")
+[node name="player" parent="." instance=ExtResource("1_q5tks")]
