@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://d2447vg7p0omn"]
 
-[ext_resource type="PackedScene" uid="uid://dbks0twyb0nrq" path="res://player.tscn" id="1_q5tks"]
+[ext_resource type="PackedScene" uid="uid://meagb2dinhur" path="res://player.tscn" id="1_q5tks"]
 
 [node name="Node2D" type="Node2D"]
 scale = Vector2(-0.612821, 0.327712)

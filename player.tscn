@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dbks0twyb0nrq"]
+[gd_scene load_steps=5 format=3 uid="uid://meagb2dinhur"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_vrr82"]
 [ext_resource type="Texture2D" uid="uid://botq45fagp46e" path="res://kenney_top-down-tanks/PNG/Tanks/tankBlue.png" id="2_y2g25"]
