@@ -1,4 +1,4 @@
-extends CharacterBody2D
+ extends CharacterBody2D
 
 const SPEED = 20
 const ROTATION_SPEED = 2.0  # Adjust this value for faster or slower rotation
