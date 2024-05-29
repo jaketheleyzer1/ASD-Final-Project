@@ -9,3 +9,5 @@ scale = Vector2(-0.612821, 0.327712)
 format = 2
 
 [node name="player" parent="." instance=ExtResource("1_q5tks")]
+position = Vector2(-1610.58, 1641.69)
+rotation = 3.14159
