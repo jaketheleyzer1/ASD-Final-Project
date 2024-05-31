@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://diw8iqxjuxhwh"]
+
+[ext_resource type="PackedScene" uid="uid://c7nkro5whg7ax" path="res://tanks/Tanks.tscn" id="1_0yc27"]
+[ext_resource type="Texture2D" uid="uid://bn371envkv4s0" path="res://kenney_top-down-tanks/Spritesheet/sheet_tanks.png" id="2_3l8ed"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7plit"]
+size = Vector2(69, 78)
+
+[node name="Player" instance=ExtResource("1_0yc27")]
+metadata/_edit_group_ = true
+
+[node name="Body" parent="." index="0"]
+texture = ExtResource("2_3l8ed")
+region_enabled = true
+region_rect = Rect2(507, 78, 81, 78)
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(0.5, 0)
+shape = SubResource("RectangleShape2D_7plit")
+
+[node name="Turret" parent="." index="2"]
+texture = ExtResource("2_3l8ed")
+offset = Vector2(2.08165e-12, 20)
+region_enabled = true
+region_rect = Rect2(828, 226, 22, 58)
+
+[node name="Muzzle" parent="Turret" index="0"]
+position = Vector2(2.08165e-12, 53)

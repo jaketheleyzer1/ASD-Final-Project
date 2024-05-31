@@ -1,9 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716397744
-icon.svg::CompressedTexture2D::1377508511332336690::1716396468::1716396468::1::::<><>::
-main.tscn::PackedScene::9116046836103252501::1716397459::0::1::::<><>::res://player.gd
-player.gd::GDScript::-1::1716397373::0::1::::<>CharacterBody2D<>::
-tankBlue.png::CompressedTexture2D::1466448529768219494::1716397427::1716397427::1::::<><>::
+::res://::1717001790
+tank.gd::GDScript::-1::1717002621::0::1::::<>CharacterBody2D<>::
 ::res://kenney_top-down-tanks/::1716397744
 license.txt::TextFile::-1::1716397744::0::1::::<><>::
 preview.png::CompressedTexture2D::335604811148366743::1716397744::1716397744::1::::<><>::
@@ -105,3 +102,6 @@ sheet_tanks.png::CompressedTexture2D::3358667833655474713::1716397744::171639774
 sheet_tanks.xml::TextFile::-1::1716397744::0::1::::<><>::
 ::res://kenney_top-down-tanks/Vector/::1716397744
 vector_tanks.svg::CompressedTexture2D::1666120260691044423::1716397744::1716397744::1::::<><>::
+::res://tanks/::1717001790
+player.tscn::PackedScene::7768207934226072039::1717002523::0::1::::<><>::uid://c7nkro5whg7ax::::res://tanks/Tanks.tscn<>uid://bn371envkv4s0::::res://kenney_top-down-tanks/Spritesheet/sheet_tanks.png
+Tanks.tscn::PackedScene::7046359585710304375::1717001804::0::1::::<><>::

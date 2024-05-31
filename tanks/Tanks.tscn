@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c7nkro5whg7ax"]
+
+[node name="Tank" type="CharacterBody2D"]
+
+[node name="Body" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="Turret" type="Sprite2D" parent="."]
+
+[node name="Muzzle" type="Marker2D" parent="Turret"]
+
+[node name="GunCooldown" type="Timer" parent="."]
