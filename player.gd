@@ -1,22 +1,25 @@
 extends CharacterBody2D
+const SPEED = 300.0
 
-const SPEED = 200
-const ROTATION_SPEED = 2.0  # Adjust this value for faster or slower rotation
+@export var side = 'p1'
 
 func _physics_process(delta):
-	var direction = Vector2.ZERO
+	var direction
 	
-	# Handle rotation
-	if Input.is_action_pressed("ui_left"):
-		rotation += ROTATION_SPEED * delta
-	if Input.is_action_pressed("ui_right"):
-		rotation -= ROTATION_SPEED * delta
-	
-	# Handle movement
-	if Input.is_action_pressed("ui_up"):
-		direction = Vector2(SPEED, 0).rotated(rotation)
-	elif Input.is_action_pressed("ui_down"):
-		direction = Vector2(-SPEED * 0.8, 0).rotated(rotation)
-
-	velocity = direction
+	if side == 'p1':
+		direction = get_axis(KEY_W, KEY_S)
+	else:
+		direction = get_axis (KEY_I, KEY_K)
+	if direction:
+		velocity.y = direction * SPEED
+	else:
+		velocity.y = move_toward(velocity.y, 0, SPEED)
 	move_and_slide()
+func get_axis(up, down):
+	if Input.is_key_pressed(up): return -1
+	elif Input.is_key_pressed(down): return 1
+
+
+func _on_area_2d_body_entered(body):
+	body.direction.x *=-1
+	Main.side = side

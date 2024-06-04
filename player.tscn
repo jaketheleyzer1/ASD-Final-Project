@@ -1,23 +1,35 @@
-[gd_scene load_steps=5 format=3 uid="uid://meagb2dinhur"]
+[gd_scene load_steps=5 format=3 uid="uid://be84td3ejsruq"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_vrr82"]
-[ext_resource type="Texture2D" uid="uid://botq45fagp46e" path="res://kenney_top-down-tanks/PNG/Tanks/tankBlue.png" id="2_y2g25"]
-[ext_resource type="Texture2D" uid="uid://dl4h6dlpu7rhm" path="res://kenney_top-down-tanks/PNG/Tanks/barrelBlue.png" id="3_2l6de"]
+[ext_resource type="Script" path="res://Player.gd" id="1_skkyw"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8ibmg"]
-size = Vector2(73, 73)
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_bbyar"]
 
-[node name="player" type="CharacterBody2D"]
-script = ExtResource("1_vrr82")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bakgm"]
+size = Vector2(29, 256)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v0d38"]
+size = Vector2(29, 253)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_skkyw")
+side = null
+metadata/_edit_group_ = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_y2g25")
-
-[node name="BarrelBlue" type="Sprite2D" parent="Sprite2D"]
-position = Vector2(0.82, 30)
-scale = Vector2(0.99006, 0.994665)
-texture = ExtResource("3_2l6de")
+position = Vector2(0.999998, 0)
+scale = Vector2(29, 256)
+texture = SubResource("PlaceholderTexture2D_bbyar")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1.5, -0.5)
-shape = SubResource("RectangleShape2D_8ibmg")
+position = Vector2(1, 0)
+shape = SubResource("RectangleShape2D_bakgm")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_v0d38")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
